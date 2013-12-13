@@ -1,6 +1,7 @@
 # ExceptionNotifier::FluentLoggerNotifier
 
-TODO: Write a gem description
+`ExceptionNotifier::FluentLoggerNotifier` is a custom notifier for [ExceptionNotifier](http://smartinez87.github.io/exception_notification/).
+It sends exception notifications to [Fluentd data collector](http://fluentd.org/) via [fluent-logger](https://github.com/fluent/fluent-logger-ruby).
 
 ## Installation
 
@@ -27,3 +28,7 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## License
+
+[MIT](http://makimoto.mit-license.org/)
