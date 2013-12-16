@@ -21,7 +21,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "pry"
-  spec.add_development_dependency "byebug"
   spec.add_dependency "exception_notification", "~> 4.0.1"
-  spec.add_dependency "fluent-logger", "~> 0.4.7"
+  spec.add_dependency "fluent-logger"
 end
