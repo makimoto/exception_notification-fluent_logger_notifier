@@ -10,6 +10,10 @@ describe ExceptionNotifier::FluentLoggerNotifier do
   let(:notifier) do
     ExceptionNotifier::FluentLoggerNotifier.new(
       test_logger: true,
+      logger_settings: {
+        :host => "localhost",
+        :port => 8888,
+      },
       template: {
         message: ->(exception, options) { "Exception: #{exception.class}: #{exception.message}" }
       }

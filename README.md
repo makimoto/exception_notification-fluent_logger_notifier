@@ -20,8 +20,11 @@ Or install it yourself as:
 ## Usage
 
 As other exception notifiers, add settings at the environments.
-Key `tag_prefix` is for the fluentd tag.
-Key `templete` is for setting log format and must be Hash.
+
+* Key `tag_prefix` is for the fluentd tag.
+* Key `template` is for setting log format and must be Hash.
+* Key `logger_settings` is for settings of the logger instance.
+* If key `test_logger` is `true`, the notifier use `Fluent::Logger::TestLogger` instead of `FluentLogger`.
 
 See also [exception_notifier's doc](http://smartinez87.github.io/exception_notification/#notifiers).
 
@@ -31,7 +34,11 @@ See also [exception_notifier's doc](http://smartinez87.github.io/exception_notif
 Whatever::Application.config.middleware.use ExceptionNotification::Rack,
   :fluent_logger => {
     :tag_prefix => "exceptions",
-    :templete => {
+    :logger_settings => {
+      :host => "localhost",
+      :port => 8888,
+    }
+    :template => {
       exception_class: ->(exception, options) { exception.class_name },
       exception_message: -> (exception, options) { exception.messaage },
     }
