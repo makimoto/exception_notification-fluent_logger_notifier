@@ -39,8 +39,8 @@ Whatever::Application.config.middleware.use ExceptionNotification::Rack,
       :port => 8888,
     }
     :template => {
-      exception_class: ->(exception, options) { exception.class_name },
-      exception_message: -> (exception, options) { exception.messaage },
+      :exception_class => ->(exception, options) { exception.class_name },
+      :exception_message => -> (exception, options) { exception.messaage },
     }
   }
 ```
