@@ -19,7 +19,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+As other exception notifiers, add settings at the environments.
+Key `tag_prefix` is for the fluentd tag.
+Key `templete` is for setting log format and must be Hash.
+
+See also [exception_notifier's doc](http://smartinez87.github.io/exception_notification/#notifiers).
+
+### Example
+
+```ruby
+Whatever::Application.config.middleware.use ExceptionNotification::Rack,
+  :fluent_logger => {
+    :tag_prefix => "exceptions",
+    :templete => {
+      exception_class: ->(exception, options) { exception.class_name },
+      exception_message: -> (exception, options) { exception.messaage },
+    }
+  }
+```
 
 ## Contributing
 
