@@ -1,6 +1,6 @@
 # ExceptionNotifier::FluentLoggerNotifier
 
-`ExceptionNotifier::FluentLoggerNotifier` is a custom notifier for [ExceptionNotifier](http://smartinez87.github.io/exception_notification/).
+`ExceptionNotifier::FluentLoggerNotifier` is a custom notifier for [ExceptionNotification](http://smartinez87.github.io/exception_notification/).
 It sends exception notifications to [Fluentd data collector](http://fluentd.org/) via [fluent-logger](https://github.com/fluent/fluent-logger-ruby).
 
 ## Installation
@@ -24,7 +24,7 @@ As other exception notifiers, add settings at the environments.
 * Key `tag_prefix` is for the fluentd tag.
 * Key `template` is for setting log format and must be Hash.
 * Key `logger_settings` is for settings of the logger instance.
-* If key `test_logger` is `true`, the notifier use `Fluent::Logger::TestLogger` instead of `FluentLogger`.
+* If key `test_logger` is `true`, the notifier uses `Fluent::Logger::TestLogger` instead of `FluentLogger`.
 
 See also [exception_notifier's doc](http://smartinez87.github.io/exception_notification/#notifiers).
 
