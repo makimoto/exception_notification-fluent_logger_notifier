@@ -32,15 +32,15 @@ See also [exception_notifier's doc](http://smartinez87.github.io/exception_notif
 
 ```ruby
 Whatever::Application.config.middleware.use ExceptionNotification::Rack,
-  :fluent_logger => {
-    :tag_prefix => "exceptions",
-    :logger_settings => {
-      :host => "localhost",
-      :port => 8888,
+  fluent_logger: {
+    tag_prefix: "exceptions",
+    logger_settings: {
+      host: "localhost",
+      port: 8888,
     }
-    :template => {
-      :exception_class => ->(exception, options) { exception.class_name },
-      :exception_message => -> (exception, options) { exception.messaage },
+    template: {
+      exception_class: ->(exception, options) { exception.class_name },
+      exception_message: => -> (exception, options) { exception.messaage },
     }
   }
 ```
