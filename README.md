@@ -7,7 +7,7 @@ It sends exception notifications to [Fluentd data collector](http://fluentd.org/
 
 Add this line to your application's Gemfile:
 
-    gem 'exception_notification_fluent_logger_notifier'
+    gem 'exception_notification-fluent_logger_notifier'
 
 And then execute:
 
@@ -15,7 +15,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install exception_notification_fluent_logger_notifier
+    $ gem install exception_notification-fluent_logger_notifier
 
 ## Usage
 
@@ -26,7 +26,7 @@ As other exception notifiers, add settings at the environments.
 * Key `logger_settings` is for settings of the logger instance.
 * If key `test_logger` is `true`, the notifier uses `Fluent::Logger::TestLogger` instead of `FluentLogger`.
 
-See also [exception_notifier's doc](http://smartinez87.github.io/exception_notification/#notifiers).
+See also [exception\_notifier's doc](http://smartinez87.github.io/exception_notification/#notifiers).
 
 ### Example
 

@@ -1,15 +1,14 @@
-# coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "exception_notifier/fluent_logger_notifier/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "exception_notification_fluent_logger_notifier"
+  spec.name          = "exception_notification-fluent_logger_notifier"
   spec.version       = ExceptionNotifier::FluentLoggerNotifier::VERSION
   spec.authors       = ["Shimpei Makimoto"]
   spec.email         = ["makimoto@tsuyabu.in"]
   spec.summary       = %q{A custom notifier for ExceptionNotification which notifies exceptions to Fluentd via fluent-logger}
-  spec.homepage      = "https://github.com/makimoto/exception_notification_fluent_logger_notifier"
+  spec.homepage      = "https://github.com/makimoto/exception_notification-fluent_logger_notifier"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
